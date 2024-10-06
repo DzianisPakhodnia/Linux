@@ -1,0 +1,10 @@
+#!/bin/sh
+zenity --question --title="Select" --text="Are you a man?" --width=300 --height=200
+case "$?" in
+  0) zenity --info --text="Good day, Boy" --width=300 --height=100 ;;
+  1) zenity --info --text="Good day, Girl" --width=300 --height=100 ;;
+  *) zenity --info --text="Good day" --width=300 --height=100 ;;
+esac
+sleep 1
+exit 0
+
